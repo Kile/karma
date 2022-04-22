@@ -17,7 +17,8 @@ discord.on('MESSAGE_CREATE', async (message) => {
   if (
     (message.content.toLowerCase().includes('thanks') ||
       message.content.toLowerCase().includes('thx') ||
-      message.content.toLowerCase().includes('thank you')) &&
+      message.content.toLowerCase().includes('thank you') ||
+      message.content.toLowerCase().match(/\bty\b/)) &&
     message.author.id != message.mentions[0].id
   ) {
     if (
